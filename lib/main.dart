@@ -12,6 +12,7 @@ import 'features/search/models/property_preview_model.dart';
 import 'features/search/models/search_filter_model.dart';
 import 'features/mortgage_calculator/models/mortgage_calculation_model.dart';
 import 'features/profile/models/user_preferences_model.dart';
+import 'core/widgets/launch_disclaimer_wrapper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -65,6 +66,7 @@ class NestHavenApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       routerConfig: router,
+      builder: (context, child) => LaunchDisclaimerWrapper(child: child!),
     );
   }
 }
